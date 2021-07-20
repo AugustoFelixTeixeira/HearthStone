@@ -13,6 +13,9 @@ import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
 
 /**
  *
@@ -25,14 +28,27 @@ public class CartaEntity implements Serializable {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
 
+    @NotNull
     private String nome;
+
+    @NotNull
     private String descricao;
+
+    @NotNull
     private int ataque;
+
+    @NotNull
     private int defesa;
+
+    @NotNull
     @Enumerated(EnumType.STRING)
     private Tipo tipo;
+
+    @NotNull
     @Enumerated(EnumType.STRING)
     private Classe classe;
+
+    @NotNull
     private int mana;
 
     //<editor-fold defaultstate="collapsed" desc="Enum">
@@ -45,7 +61,7 @@ public class CartaEntity implements Serializable {
     }
 //</editor-fold>
 
-//<editor-fold defaultstate="collapsed" desc="Gets and Sets">
+    //<editor-fold defaultstate="collapsed" desc="Gets and Sets">
     public int getId() {
         return id;
     }

@@ -1,0 +1,368 @@
+{
+	"info": {
+		"_postman_id": "9d797443-1dac-4c67-89a1-87f3a60c8de9",
+		"name": "Testes HearthStone",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Criar carta classe MAGO",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"nome\" : \"Bola de Fogo\",\n \t\"descricao\" : \"Este feitiço é útil para queimar coisas. Se você está procurando feitiços para torrar coisas, ou apenas aquecê-las um pouco, você está no lugar errado.\",\n\t\"ataque\" : 0,\n\t\"defesa\" : 0,\n\t\"tipo\" : \"MAGIA\",\n\t\"classe\" : \"MAGO\",\n\t\"mana\" : 4\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/carta",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"carta"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Criar carta classe PALADINO",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"nome\"   : \"Tirion Fordring\",\n\t\"descricao\" : \"Escudo Divino, Provocar Último Suspiro: Equipe uma Crematória 5/3.\",\n\t\"ataque\" : 6,\n\t\"defesa\" : 6,\n\t\"tipo\" : \"CRIATURA\",\n\t\"classe\" : \"PALADINO\",\n\t\"mana\" : 8\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/carta",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"carta"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Criar carta classe CAÇADOR",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"nome\"   : \"Rei Mó\",\n\t\"descricao\" : \"Investida\",\n\t\"ataque\" : 8,\n\t\"defesa\" : 8,\n\t\"tipo\" : \"CRIATURA\",\n\t\"classe\" : \"CACADOR\",\n\t\"mana\" : 9\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/carta",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"carta"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Criar carta classe DRUIDA",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"nome\"   : \"Força da Natureza\",\n\t\"descricao\": \"Evoque três Arvorosos 2/2 com Investida, que morrerão no final do turno.\",\n\t\"ataque\" : 0,\n\t\"defesa\" : 0,\n\t\"tipo\" : \"MAGIA\",\n\t\"classe\" : \"DRUIDA\",\n\t\"mana\" : 6\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/carta",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"carta"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Criar carta classe QUALQUER",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"nome\"   : \"Frango Nervoso\",\n\t\"descricao\" : \"Enfurecer: +5 de Ataque.\",\n\t\"ataque\" : 1,\n\t\"defesa\" : 1,\n\t\"tipo\" : \"CRIATURA\",\n\t\"classe\" : \"QUALQUER\",\n\t\"mana\" : 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/carta",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"carta"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar Todas as Cartas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/carta/all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"carta",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Deletar uma carta ",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/carta/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"carta",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Pesquisar uma carta por ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/carta/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"carta",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Pesquisar uma carta por Nome",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Pesquidar uma carta por Tipo MAGIA",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/carta/tipo/MAGIA",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"carta",
+						"tipo",
+						"MAGIA"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Pesquidar uma carta por Tipo CRIATURA",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/carta/tipo/CRIATURA",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"carta",
+						"tipo",
+						"CRIATURA"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Pesquisar uma carta por Classe MAGO",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/carta/classe/MAGO",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"carta",
+						"classe",
+						"MAGO"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Pesquisar uma carta por Classe PALADINO",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/carta/classe/PALADINO",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"carta",
+						"classe",
+						"PALADINO"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Pesquisar uma carta por Classe CAÇADOR",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/carta/classe/CACADOR",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"carta",
+						"classe",
+						"CACADOR"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Pesquisar uma carta por Classe DRUIDA",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/carta/classe/DRUIDA",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"carta",
+						"classe",
+						"DRUIDA"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Pesquisar uma carta por Classe QUALQUER",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/carta/classe/QUALQUER",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"carta",
+						"classe",
+						"QUALQUER"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
