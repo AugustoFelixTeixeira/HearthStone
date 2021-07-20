@@ -5,14 +5,18 @@ Avaliação B - Desenvolvedor Java
 A collection para teste no postman está na pasta "Collections Teste Postman" na raiz do projeto.
 
 ## Compilar o Projeto
-
+Primeiramente criar a variavel
 ### Pela IDE Netbeans 12.0
-Importar o projeto e executar.
+Caso nao tenha JDK, as mesmas estão disponilizadas no link: ```https://drive.google.com/drive/folders/13sCG9dsKUQ2yAkhMfwxnGoctTSgzWiyt?usp=sharing```
 
 ### Por linha de comando
- - Windows: Abrir o PowerShell na raiz do projeto e executar o seguinte comando ```.\mvnw spring-boot```
+ - Criar uma variável de ambiente chamada JAVA_HOME e apontar para o JDK.
+ - Windows: Abrir o PowerShell na raiz do projeto e executar o seguinte comando ```.\mvnw spring-boot:run```
  - Linux: Abrir terminal na raiz do projeto e executar o seguinte comando ```./mvnw spring-boot:run```
 
+## JDK
+ - Java 8
+ 
 ## Frameworks
  - SpringBoot
  - Jersey
